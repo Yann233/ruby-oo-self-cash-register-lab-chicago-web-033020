@@ -14,7 +14,7 @@ class CashRegister
      @price = price
      @quantity = quantity
      self.total += self.price * self.quantity
-     quantity.times {@items << item}
+     quantity.times {self.items << item}
     end
 
 
