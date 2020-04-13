@@ -5,8 +5,8 @@ class CashRegister
   attr_reader :price, :quantity
 
   def initialize(discount=nil)
-    @total = 0
-    @discount = discount
+    @total = 0 #sets an instance variable @total on initialization to zero
+    @discount = discount #optionally takes an employee discount on initialization
     @items = []
   end
 
@@ -16,6 +16,7 @@ class CashRegister
     @total += @price * @quantity
      quantity.times {@items << item}
     end
+
 
   def apply_discount
     if @discount
